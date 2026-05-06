@@ -118,11 +118,21 @@ export const mockDNA = {
 }
 
 export const mockTrending = [
-  { id: 1, rank: 1,  title: 'AI工具改变工作流：我的亲测体验',       heat: 98, match: 92, tag: '科技' },
-  { id: 2, rank: 2,  title: '每日只需15分钟，坚持30天的变化',         heat: 94, match: 88, tag: '成长' },
-  { id: 3, rank: 3,  title: '2026年最值得学的3项技能',               heat: 91, match: 95, tag: '职场' },
-  { id: 4, rank: 4,  title: '我是如何从0粉到10万的完整复盘',           heat: 87, match: 84, tag: '创作' },
-  { id: 5, rank: 5,  title: '深度测评：这款笔记软件让我效率翻倍',       heat: 83, match: 76, tag: '效率' },
+  { id: 1,  rank: 1,  title: '含机量爆表',     desc: 'AI/机器人占比极高，反讽某内容"过于AI"',             heat: 99, match: 94, tag: '顶流爆款' },
+  { id: 2,  rank: 2,  title: '我要验牌',       desc: '不服气、要较真，"凭什么你说了算"',                   heat: 97, match: 91, tag: '顶流爆款' },
+  { id: 3,  rank: 3,  title: '涂山，我罩的',   desc: '霸气护短，从《狐妖小红娘》出圈的表忠心宣言',           heat: 95, match: 88, tag: '顶流爆款' },
+  { id: 4,  rank: 4,  title: '马到(倒)成功',  desc: '马年反向谐音梗，自嘲事情没搞成',                      heat: 92, match: 85, tag: '顶流爆款' },
+  { id: 5,  rank: 5,  title: '外卖三国杀',     desc: '美团/饿了么/拼多多外卖大战，用户疯狂薅羊毛',           heat: 90, match: 82, tag: '顶流爆款' },
+  { id: 6,  rank: 6,  title: '精神离职',       desc: '人在工位，心已辞职，摸鱼最高境界',                    heat: 88, match: 93, tag: '打工人' },
+  { id: 7,  rank: 7,  title: '班味入脑',       desc: '放假脑子里还全是工作，病得不轻',                      heat: 85, match: 89, tag: '打工人' },
+  { id: 8,  rank: 8,  title: '职场隐身',       desc: '不社交、不内卷、不显眼，低调苟活',                    heat: 83, match: 86, tag: '打工人' },
+  { id: 9,  rank: 9,  title: '无效加班',       desc: '加班没有任何产出，纯粹在耗时间',                      heat: 80, match: 84, tag: '打工人' },
+  { id: 10, rank: 10, title: '空降疲惫',       desc: '周一突然被塞满任务，瞬间从休息状态跌回压力谷底',         heat: 78, match: 81, tag: '打工人' },
+  { id: 11, rank: 11, title: '允许一切发生',   desc: '与生活和解，躺平接纳变数',                            heat: 87, match: 90, tag: '情绪治愈' },
+  { id: 12, rank: 12, title: '电子布洛芬',     desc: '治愈坏心情的视频/内容，精神止痛药',                    heat: 84, match: 87, tag: '情绪治愈' },
+  { id: 13, rank: 13, title: '活人感',         desc: '真实自然、不装不演，真人该有的状态',                   heat: 82, match: 88, tag: '情绪治愈' },
+  { id: 14, rank: 14, title: '爱你老己',       desc: '方言版"爱自己"，自我关怀宣言',                        heat: 79, match: 85, tag: '情绪治愈' },
+  { id: 15, rank: 15, title: '心愿便利贴',     desc: '一天一天贴近你的心',                                  heat: 76, match: 80, tag: '情绪治愈' },
 ]
 
 export const mockTopics = [

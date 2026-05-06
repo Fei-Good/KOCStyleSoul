@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { mockTrending, mockTopics, mockBuilderCards, outputTypeMap } from '../data/mock'
 import './HomePage.css'
 
-const FILTERS = ['全部', '科技', '成长', '职场', '创作', '效率']
+const FILTERS = ['全部', '顶流爆款', '打工人', '情绪治愈']
 
 // 根据选中的卡片组合生成内容创作包内容
 function generatePackage(trendingItem: typeof mockTrending[0], selectedCards: string[]) {
