@@ -1,0 +1,743 @@
+.dna-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  animation: fadeUp var(--duration-enter) var(--ease-out) both;
+}
+
+/* ── 平台 Tab ── */
+.platform-tabs {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.platform-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--color-border);
+  background: var(--color-white);
+  font-size: var(--text-label);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  transition: all var(--duration-base) var(--ease-out);
+  cursor: pointer;
+}
+
+.platform-tab--active {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.platform-tab--future {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.platform-tab-icon {
+  font-size: 14px;
+}
+
+.platform-tab-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  background: var(--color-green-bg);
+  color: var(--color-green-dk);
+  border: 1.5px solid rgba(74,155,111,0.3);
+}
+
+.platform-tab-badge--soon {
+  background: var(--color-bg-warm);
+  color: var(--color-ink-muted);
+  border-color: var(--color-border);
+}
+
+/* ── Header ── */
+.dna-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.dna-title {
+  font-family: var(--font-display);
+  font-size: var(--text-section);
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -1px;
+}
+
+.dna-sub {
+  font-size: var(--text-label);
+  color: var(--color-ink-muted);
+  margin-top: var(--space-2);
+  font-weight: 500;
+}
+
+.dna-header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+.update-label {
+  font-size: var(--text-label);
+  color: var(--color-ink-muted);
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+
+.update-btn {
+  padding: 9px 20px;
+  border-radius: var(--radius-md);
+  background: var(--color-ink);
+  color: var(--color-white);
+  border: 2px solid var(--color-ink);
+  box-shadow: var(--shadow-sm);
+  font-size: var(--text-label);
+  font-weight: 700;
+  transition: transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.update-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-md);
+}
+
+.update-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}
+
+/* ── Cards ── */
+.dna-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--color-ink);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-7);
+}
+
+/* ── 赛道定位卡 ── */
+.track-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.track-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.track-card-label {
+  font-family: var(--font-display);
+  font-size: var(--text-subhead);
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.3px;
+}
+
+.track-edit-btn {
+  font-size: var(--text-label);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  padding: 5px 12px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg-warm);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.track-edit-btn:hover {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+
+.track-pills {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.track-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-border-dark);
+  background: var(--color-bg-warm);
+}
+
+.track-pill--platform {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+}
+
+.track-pill--platform .track-pill-key,
+.track-pill--platform .track-pill-val {
+  color: var(--color-white);
+}
+
+.track-pill-key {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.track-pill-val {
+  font-size: var(--text-label);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.track-bound-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-circle);
+  background: #4ade80;
+  flex-shrink: 0;
+}
+
+.track-sep {
+  color: var(--color-border-dark);
+  font-size: 18px;
+  font-weight: 300;
+  flex-shrink: 0;
+}
+
+.track-meta {
+  display: flex;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.track-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.track-meta-key {
+  font-size: var(--text-label);
+  color: var(--color-ink-muted);
+  font-weight: 500;
+}
+
+.track-meta-val {
+  font-size: var(--text-label);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.track-meta-val--role {
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dk);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(232,82,58,0.2);
+}
+
+.track-edit-hint {
+  font-size: var(--text-micro);
+  color: var(--color-ink-muted);
+  background: var(--color-yellow-bg);
+  border: 1.5px solid rgba(245,200,66,0.4);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  animation: fadeIn 200ms var(--ease-out);
+}
+
+/* ── Grid ── */
+.dna-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .dna-grid { grid-template-columns: 1fr; }
+}
+
+/* ── 雷达卡 ── */
+.dna-radar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.radar-legend {
+  display: flex;
+  gap: var(--space-5);
+  align-self: stretch;
+}
+
+.radar-legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-micro);
+  color: var(--color-ink-muted);
+  font-weight: 500;
+}
+
+.radar-legend-line {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.radar-legend-line--mine {
+  background: var(--color-primary);
+}
+
+.radar-legend-line--avg {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-yellow-dk) 0px,
+    var(--color-yellow-dk) 5px,
+    transparent 5px,
+    transparent 8px
+  );
+}
+
+.radar-wrap {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+
+.radar-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.radar-scan {
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(232,82,58,0.08) 30deg,
+    transparent 60deg
+  );
+  border-radius: var(--radius-circle);
+  animation: radarScan 4s linear infinite;
+  pointer-events: none;
+}
+
+/* ── 标签云 ── */
+.dna-tags {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dna-tag {
+  font-size: var(--text-micro);
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-dk);
+  border: 1.5px solid rgba(232,82,58,0.25);
+  transition: all var(--duration-fast) var(--ease-out);
+  cursor: pointer;
+}
+
+.dna-tag:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--color-primary);
+}
+
+.dna-tag--copied {
+  background: var(--color-green-bg);
+  color: var(--color-green-dk);
+  border-color: rgba(74,155,111,0.3);
+  transform: scale(1.04);
+}
+
+.tag-copy-hint {
+  font-size: 10px;
+  color: var(--color-ink-muted);
+  text-align: center;
+  opacity: 0.7;
+}
+
+.dna-insight {
+  font-size: var(--text-label);
+  color: var(--color-ink-muted);
+  text-align: center;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-weight: 500;
+}
+
+.insight-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── 维度卡 ── */
+.dna-dims-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.dim-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-border);
+  padding: var(--space-5);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.dim-card:hover {
+  border-color: var(--color-ink);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.dim-card--active {
+  border-color: var(--dim-color, var(--color-primary));
+  box-shadow: var(--shadow-sm);
+  transform: translate(-2px, -2px);
+}
+
+.dim-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+  gap: var(--space-2);
+}
+
+.dim-label-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  min-width: 0;
+}
+
+.dim-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-circle);
+  background: var(--dim-color, var(--color-primary));
+  border: 2px solid var(--color-ink);
+  flex-shrink: 0;
+}
+
+.dim-label {
+  font-family: var(--font-display);
+  font-size: var(--text-label);
+  font-weight: 700;
+  color: var(--color-ink);
+  flex-shrink: 0;
+}
+
+.dim-desc {
+  font-size: var(--text-micro);
+  color: var(--color-ink-muted);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dim-score-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.dim-vs {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.dim-score {
+  font-family: var(--font-mono);
+  font-size: var(--text-utility);
+  font-weight: 700;
+  color: var(--dim-color, var(--color-primary));
+}
+
+.dim-avg-label {
+  font-size: 10px;
+  color: var(--color-ink-muted);
+  font-weight: 500;
+}
+
+.dim-expand-icon {
+  font-size: 10px;
+  color: var(--color-ink-muted);
+}
+
+/* 双线进度条 */
+.dim-track {
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-warm);
+  border: 1.5px solid var(--color-border-dark);
+  overflow: visible;
+  position: relative;
+  margin-bottom: var(--space-2);
+}
+
+.dim-bar {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--dim-color, var(--color-primary));
+  transition: width var(--duration-slow) var(--ease-out);
+}
+
+.dim-avg-mark {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 12px;
+  background: var(--color-yellow-dk);
+  border-radius: 1px;
+  transform: translateX(-50%);
+}
+
+.dim-range-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-1);
+}
+
+.range-start,
+.range-end {
+  font-size: 10px;
+  color: var(--color-ink-muted);
+  font-weight: 500;
+}
+
+/* 下钻详情 */
+.dim-detail {
+  margin-top: var(--space-4);
+  border-top: 1.5px solid var(--color-border);
+  padding-top: var(--space-4);
+  animation: fadeIn 200ms var(--ease-out);
+}
+
+.dim-submetrics {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.submetric-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.submetric-label {
+  font-size: var(--text-micro);
+  color: var(--color-ink-muted);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.submetric-vals {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.submetric-val {
+  font-size: var(--text-micro);
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.submetric-val--higher {
+  background: var(--color-green-bg);
+  color: var(--color-green-dk);
+}
+
+.submetric-val--lower {
+  background: var(--color-yellow-bg);
+  color: var(--color-yellow-dk);
+}
+
+.submetric-avg {
+  font-size: 10px;
+  color: var(--color-ink-muted);
+  font-weight: 500;
+}
+
+.dim-conclusion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.dim-conclusion-text {
+  font-size: var(--text-label);
+  color: var(--color-ink);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.dim-suggestion {
+  font-size: var(--text-label);
+  color: var(--color-ink-muted);
+  line-height: 1.6;
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.suggestion-icon {
+  color: var(--color-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── 趋势卡 ── */
+.dna-trend-card {
+  padding: var(--space-7);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: var(--text-subhead);
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.3px;
+}
+
+.trend-sparklines {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 900px) {
+  .trend-sparklines { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .trend-sparklines { grid-template-columns: repeat(2, 1fr); }
+}
+
+.spark-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.spark-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.spark-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-circle);
+  border: 1.5px solid var(--color-ink);
+  flex-shrink: 0;
+}
+
+.spark-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.spark-scores {
+  font-size: 10px;
+  color: var(--color-ink-muted);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.spark-svg {
+  width: 100%;
+  height: 36px;
+  overflow: visible;
+}
+
+.trend-dates {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.trend-date {
+  font-size: 10px;
+  color: var(--color-ink-muted);
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.trend-insights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-bg-warm);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+}
+
+.trend-insight-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-label);
+  color: var(--color-ink);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.trend-insight-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-circle);
+  background: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 5px;
+}

@@ -1,0 +1,252 @@
+/* ============================================================
+   KOC StyleSoul — Design Tokens & Global Styles
+   Style: Cute Doodle · Pixel Illustration · Flat Vector
+   Inspired by Tom Whalen, James Bullough — graphic design illustrations
+   ============================================================ */
+
+:root {
+  /* ── Color: Base (white background world) ── */
+  --color-white:       #ffffff;
+  --color-bg:          #fafaf8;
+  --color-bg-warm:     #f7f5f0;
+  --color-ink:         #1a1a1a;
+  --color-ink-2:       #3d3d3d;
+  --color-ink-muted:   #7a7a7a;
+  --color-border:      #e0ddd6;
+  --color-border-dark: #c8c4bc;
+
+  /* ── Color: Flat Illustration Palette ── */
+  /* Primary: warm coral / terracotta */
+  --color-primary:     #e8523a;
+  --color-primary-lt:  #f2785f;
+  --color-primary-dk:  #c43d28;
+  --color-primary-bg:  #fdf0ed;
+
+  /* Secondary: muted sage green */
+  --color-green:       #4a9b6f;
+  --color-green-lt:    #6ab88a;
+  --color-green-dk:    #357a54;
+  --color-green-bg:    #eef7f2;
+
+  /* Accent: warm golden yellow */
+  --color-yellow:      #f5c842;
+  --color-yellow-lt:   #f9da72;
+  --color-yellow-dk:   #c9a020;
+  --color-yellow-bg:   #fef9e7;
+
+  /* Pop: dusty lavender */
+  --color-purple:      #8b7fc7;
+  --color-purple-lt:   #b0a8dc;
+  --color-purple-dk:   #6d61a8;
+  --color-purple-bg:   #f3f1fb;
+
+  /* Muted blue */
+  --color-blue:        #4a7fc1;
+  --color-blue-lt:     #6b9dda;
+  --color-blue-dk:     #3462a0;
+  --color-blue-bg:     #eef4fc;
+
+  /* ── DNA Dimensions (flat, vivid) ── */
+  --color-dna-1: #e8523a;
+  --color-dna-2: #8b7fc7;
+  --color-dna-3: #4a9b6f;
+  --color-dna-4: #f5c842;
+  --color-dna-5: #4a7fc1;
+
+  /* Legacy aliases (keep for component compatibility) */
+  --color-black:       #1a1a1a;
+  --color-apple-gray:  #fafaf8;
+  --color-near-black:  #1a1a1a;
+  --color-secondary:   #7a7a7a;
+  --color-border-soft: #e0ddd6;
+  --color-border-mid:  #c8c4bc;
+  --color-utility-dk:  #3d3d3d;
+  --color-graphite-a:  #2a2a2a;
+  --color-graphite-b:  #262626;
+  --color-graphite-c:  #282828;
+  --color-graphite-d:  #2c2c2c;
+  --color-blue-link:   #4a7fc1;
+  --color-blue-bright: #6b9dda;
+
+  /* ── Typography ── */
+  --font-display: 'Space Grotesk', 'Inter Tight', 'Helvetica Neue', Arial, sans-serif;
+  --font-text:    'Space Grotesk', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'Space Mono', 'Courier New', monospace;
+
+  /* ── Font Sizes ── */
+  --text-hero-xl:   clamp(44px, 5.5vw, 72px);
+  --text-hero-l:    clamp(32px, 4vw, 52px);
+  --text-section:   clamp(26px, 3vw, 40px);
+  --text-product:   clamp(22px, 2.5vw, 34px);
+  --text-feature:   clamp(20px, 2vw, 30px);
+  --text-promo:     clamp(18px, 1.6vw, 26px);
+  --text-card:      clamp(16px, 1.3vw, 22px);
+  --text-utility:   20px;
+  --text-link:      18px;
+  --text-subhead:   16px;
+  --text-body:      15px;
+  --text-label:     13px;
+  --text-micro:     11px;
+  --text-legal:     10px;
+
+  /* ── Spacing (8px base) ── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-7:  28px;
+  --space-8:  32px;
+  --space-9:  40px;
+  --space-10: 48px;
+  --space-11: 56px;
+  --space-12: 64px;
+  --space-13: 80px;
+  --space-14: 96px;
+  --space-15: 120px;
+
+  /* ── Border Radius — chunky, friendly ── */
+  --radius-xs:  4px;
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-2xl: 32px;
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+
+  /* ── Borders — sketch/doodle feel ── */
+  --border:       2px solid var(--color-ink);
+  --border-light: 1.5px solid var(--color-border);
+
+  /* ── Shadows — flat offset style (illustration shadow) ── */
+  --shadow-sm:    3px 3px 0px var(--color-ink);
+  --shadow-md:    4px 4px 0px var(--color-ink);
+  --shadow-lg:    6px 6px 0px var(--color-ink);
+  --shadow-card:  4px 4px 0px rgba(26,26,26,0.12);
+  --shadow-soft:  0 2px 12px rgba(0,0,0,0.06);
+  --shadow-hover: 5px 5px 0px var(--color-ink);
+  --shadow-modal: 0 16px 64px rgba(0,0,0,0.15);
+
+  /* ── Transitions ── */
+  --ease-out:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast:   120ms;
+  --duration-base:   220ms;
+  --duration-slow:   400ms;
+  --duration-enter:  500ms;
+
+  /* ── Layout ── */
+  --max-width: 1200px;
+  --nav-height: 56px;
+  --sidebar-width: 220px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-text);
+  font-size: var(--text-body);
+  color: var(--color-ink);
+  background: var(--color-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Utility: Visually Hidden ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+/* ── Page entrance animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes radarScan {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50%       { transform: rotate(3deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border-dark); border-radius: var(--radius-pill); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ink-muted); }
+
+/* ── Focus ── */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+/* ── Doodle dot pattern helper ── */
+.doodle-dots {
+  background-image: radial-gradient(circle, var(--color-border) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
