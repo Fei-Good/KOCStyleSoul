@@ -143,6 +143,8 @@ export const mockTopics = [
     score: 97,
     skills: ['反转认知选题', '悬念开场技巧'],
     tag: '精准推荐',
+    trendingId: 1,
+    subCardIds: ['topic-1', 'speech-1', 'narrative-1'],
   },
   {
     id: 2,
@@ -151,6 +153,8 @@ export const mockTopics = [
     score: 91,
     skills: ['横评对比结构', '数字化标题'],
     tag: '高潜力',
+    trendingId: 2,
+    subCardIds: ['topic-2', 'narrative-2', 'edit-3'],
   },
   {
     id: 3,
@@ -159,6 +163,8 @@ export const mockTopics = [
     score: 86,
     skills: ['概念解读框架'],
     tag: '差异化',
+    trendingId: 6,
+    subCardIds: ['topic-3', 'speech-3', 'ops-2'],
   },
 ]
 
@@ -239,6 +245,35 @@ export const outputTypeMap: Record<number, { label: string; desc: string; depth:
   4: { label: '制作发布单',   desc: '剪辑指导 + 发布计划一体',        depth: '完整' },
   5: { label: '完整创作方案', desc: '全流程方案，可一键发给 Agent 执行', depth: '完整' },
 }
+
+// ── 随心搭：今日想法推荐输入 ──
+export const mockIdeaSuggestions = [
+  { id: 's1', text: '想做一期关于"精神离职"的深度解析', tags: ['topic-3', 'speech-2'] },
+  { id: 's2', text: 'AI工具对普通人影响的反转角度选题', tags: ['topic-1', 'narrative-1', 'speech-1'] },
+  { id: 's3', text: '30天测试 5 款效率工具，最终只保留这 1 个', tags: ['topic-2', 'narrative-2', 'edit-3'] },
+  { id: 's4', text: '打工人为什么越来越"职场隐身"？', tags: ['topic-3', 'narrative-3', 'ops-2'] },
+  { id: 's5', text: '今天看到一个反常识的数据，很想做成视频', tags: ['topic-1', 'speech-3'] },
+  { id: 's6', text: '想复刻一期爆款结构，套用"外卖三国杀"热点', tags: ['topic-2', 'narrative-1', 'edit-1'] },
+]
+
+// 输入框推荐 placeholder（轮播用）
+export const mockIdeaPlaceholders = [
+  '今天看到一个反常识观点，想做成视频…',
+  '打工人选题，结合"职场隐身"热点…',
+  '想做 AI 相关内容，用反转认知结构…',
+  '30天挑战类内容，带数字标题…',
+  '情绪治愈向，给年轻人一些温暖…',
+]
+
+// 快捷输入短语 chips
+export const mockIdeaChips = [
+  { label: '🔄 反转认知', fill: '反转认知角度，' },
+  { label: '📊 数据驱动', fill: '用真实数据说话，' },
+  { label: '😤 打工人', fill: '打工人痛点共鸣，' },
+  { label: '🤖 AI话题', fill: 'AI相关热点选题，' },
+  { label: '💊 情绪治愈', fill: '情绪治愈向内容，' },
+  { label: '📱 测评横评', fill: '真实测评横向对比，' },
+]
 
 export const mockSkills = [
   {
